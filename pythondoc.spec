@@ -42,8 +42,6 @@ rm -rf $RPM_BUILD_ROOT
 
 find $RPM_BUILD_ROOT -name '*.py' -exec rm {} \;
 
-gzip -9nf LICENSE.TXT
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
