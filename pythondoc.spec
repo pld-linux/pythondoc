@@ -13,11 +13,11 @@ BuildRequires:	python
 Requires:	python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define python_prefix  %(echo `python -c "import sys; print sys.prefix"`)
-%define python_version %(echo `python -c "import sys; print sys.version[:3]"`)
-%define python_libdir      %{python_prefix}/lib/python%{python_version}
-%define python_includedir  %{python_prefix}/include/python%{python_version}
-%define python_sitedir     %{python_libdir}/site-packages
+%define		python_prefix		%(echo `python -c "import sys; print sys.prefix"`)
+%define		python_version		%(echo `python -c "import sys; print sys.version[:3]"`)
+%define		python_libdir		%{python_prefix}/lib/python%{python_version}
+%define		python_includedir	%{python_prefix}/include/python%{python_version}
+%define		python_sitedir		%{python_libdir}/site-packages
 
 %description
 Pythondoc is a tool that extracts information from Python objects, and
