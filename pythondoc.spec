@@ -3,7 +3,7 @@ Summary(pl):	Narzêdzie tworz±ce manuale i indeksy z informacji wyci±gniêtych z o
 Name:		pythondoc
 Version:	0.7
 Release:	1
-License:	free
+License:	Free
 Group:		Development/Languages/Python
 Source0:	http://starship.python.net/crew/danilo/pythondoc/%{name}_07.zip
 Patch0:		%{name}-DESTDIR.patch
