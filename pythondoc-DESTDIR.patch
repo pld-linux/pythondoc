@@ -1,0 +1,35 @@
+--- pythondoc-0.7/pythondoc/Makefile.wiget	Sun Dec 13 16:24:44 1998
++++ pythondoc-0.7/pythondoc/Makefile	Wed Dec 13 15:40:12 2000
+@@ -6,6 +6,7 @@
+ 
+ PYTHON_BIN = `python -c "import sys; print sys.prefix + '/bin'"`
+ PYTHON_LIB = `python -c "import sys; print sys.prefix + '/lib/python' + sys.version[:3] + '/site-packages'"`
++PYTHON_COMPILE = `python -c "import sys; print sys.prefix + '/lib/python' + sys.version[:3] + '/compileall.py'"`
+ 
+ PROG    = pythondoc
+ PACKAGE = pythondoc
+@@ -69,16 +70,18 @@
+ 
+ install:
+ 	@echo $(PYTHON_BIN) $(PYTHON_LIB)
+-	-mkdir $(PYTHON_BIN) 2>/dev/null || true
+-	$(INSTALL_PRG) $(PROG) $(PYTHON_BIN)/$(PROG)
++	$(INSTALL_PRG) -d  $(DESTDIR)$(PYTHON_BIN)
++	$(INSTALL_PRG) $(PROG) $(DESTDIR)$(PYTHON_BIN)/$(PROG)
+ 
+-	-mkdir $(PYTHON_LIB)/$(PACKAGE) 2>/dev/null || true
+-	-mkdir $(PYTHON_LIB)/$(PACKAGE)/formatters 2>/dev/null || true
+-	-mkdir $(PYTHON_LIB)/$(PACKAGE)/xref 2>/dev/null || true
++	$(INSTALL_PRG) -d $(DESTDIR)$(PYTHON_LIB)/$(PACKAGE)
++	$(INSTALL_PRG) -d $(DESTDIR)$(PYTHON_LIB)/$(PACKAGE)/formatters
++	$(INSTALL_PRG) -d $(DESTDIR)$(PYTHON_LIB)/$(PACKAGE)/xref
+ 
+ 	@for file in $(MODULES) $(INSTALL_FILES); do \
+-	    $(INSTALL_DATA) $$file $(PYTHON_LIB)/$(PACKAGE)/$$file; \
++	    $(INSTALL_DATA) $$file $(DESTDIR)$(PYTHON_LIB)/$(PACKAGE)/$$file; \
+ 	done
++	python $(PYTHON_COMPILE) $(DESTDIR)$(PYTHON_LIB)/$(PACKAGE)
++	python -O $(PYTHON_COMPILE) $(DESTDIR)$(PYTHON_LIB)/$(PACKAGE)
+ 
+ 	@echo Installation of $(PACKAGE) done.
+ 	@bindir=$(PYTHON_BIN); \
