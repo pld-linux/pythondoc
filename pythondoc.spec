@@ -6,6 +6,7 @@ Release:	1
 License:	Free
 Group:		Development/Languages/Python
 Source0:	http://starship.python.net/crew/danilo/pythondoc/%{name}_07.zip
+# Source0-md5:	b4defb3a33ea44e68e374810a07adba8
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://starship.python.net/crew/danilo/pythondoc/
 BuildRequires:	python
