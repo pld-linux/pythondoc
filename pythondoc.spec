@@ -5,8 +5,6 @@ Version:	0.7
 Release:	1
 License:	free
 Group:		Development/Languages/Python
-Group(de):	Entwicklung/Sprachen/Python
-Group(pl):	Programowanie/Jêzyki/Python
 Source0:	http://starship.python.net/crew/danilo/pythondoc/%{name}_07.zip
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://starship.python.net/crew/danilo/pythondoc/
