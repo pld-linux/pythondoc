@@ -1,13 +1,16 @@
-Summary:	Pythondoc - tool that extracts information from Python objects, and generates reference manuals and indices
+Summary:	Extracts information from Python objects, and generates reference manuals and indices
+Summary(pl):	Narzêdzie tworz±ce manuale i indeksy z informacji wyci±gniêtych z obiektów Pythona
 Name:		pythondoc
 Version:	0.7
 Release:	1
 License:	free
-Group:		Languages/Python
-Source0:	http://starship.python.net/crew/danilo/pythondoc/pythondoc_07.zip
+Group:		Development/Languages/Python
+Group(de):	Entwicklung/Sprachen/Python
+Group(pl):	Programowanie/Jêzyki/Python
+Source0:	http://starship.python.net/crew/danilo/pythondoc/%{name}_07.zip
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://starship.python.net/crew/danilo/pythondoc/
-BuildPrereq:	python
+BuildRequires:	python
 Requires:	python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -18,22 +21,24 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define python_sitedir     %{python_libdir}/site-packages
 
 %description
-Pythondoc is a tool that extracts information from Python objects,
-and generates reference manuals and indices. For best results use
-StructuredText markup in your docstrings. 
-A quick guide to StructuredText may be found at
+Pythondoc is a tool that extracts information from Python objects, and
+generates reference manuals and indices. For best results use
+StructuredText markup in your docstrings. A quick guide to
+StructuredText may be found at
+http://www.zope.org/Members/millejoh/structuredText.
+
+%description -l pl
+Pythondoc to narzêdzie wyci±gaj±ce informacje z obiektów Pythona i
+generuj±ce na ich podstawie manuale i indeksy. Najlepiej u¿ywaæ
+oznaczeñ StructuredText. Wprowadzenie do niego mo¿na znale¼æ pod:
 http://www.zope.org/Members/millejoh/structuredText.
 
 %prep
-%setup  -q -c -T
-unzip -qa %{SOURCE0}
+%setup -q -n %{name}
 %patch0 -p1
-
-%build
 
 %install
 rm -rf $RPM_BUILD_ROOT
-cd %{name}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
