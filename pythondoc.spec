@@ -1,5 +1,5 @@
 Summary:	Extracts information from Python objects, and generates reference manuals and indices
-Summary(pl):	Narzêdzie tworz±ce manuale i indeksy z informacji wyci±gniêtych z obiektów Pythona
+Summary(pl.UTF-8):   NarzÄ™dzie tworzÄ…ce manuale i indeksy z informacji wyciÄ…gniÄ™tych z obiektÃ³w Pythona
 Name:		pythondoc
 Version:	0.7
 Release:	1
@@ -26,10 +26,10 @@ StructuredText markup in your docstrings. A quick guide to
 StructuredText may be found at
 http://www.zope.org/Members/millejoh/structuredText.
 
-%description -l pl
-Pythondoc to narzêdzie wyci±gaj±ce informacje z obiektów Pythona i
-generuj±ce na ich podstawie manuale i indeksy. Najlepiej u¿ywaæ
-oznaczeñ StructuredText. Wprowadzenie do niego mo¿na znale¼æ pod:
+%description -l pl.UTF-8
+Pythondoc to narzÄ™dzie wyciÄ…gajÄ…ce informacje z obiektÃ³w Pythona i
+generujÄ…ce na ich podstawie manuale i indeksy. Najlepiej uÅ¼ywaÄ‡
+oznaczeÅ„ StructuredText. Wprowadzenie do niego moÅ¼na znaleÅºÄ‡ pod:
 http://www.zope.org/Members/millejoh/structuredText.
 
 %prep
