@@ -1,5 +1,5 @@
 Summary:	Extracts information from Python objects, and generates reference manuals and indices
-Summary(pl.UTF-8):   Narzędzie tworzące manuale i indeksy z informacji wyciągniętych z obiektów Pythona
+Summary(pl.UTF-8):	Narzędzie tworzące manuale i indeksy z informacji wyciągniętych z obiektów Pythona
 Name:		pythondoc
 Version:	0.7
 Release:	1
