@@ -10,6 +10,7 @@ Source0:	http://starship.python.net/crew/danilo/pythondoc/%{name}_07.zip
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://starship.python.net/crew/danilo/pythondoc/
 BuildRequires:	python
+BuildRequires:	unzip
 Requires:	python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
